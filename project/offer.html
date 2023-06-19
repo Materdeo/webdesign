@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Site</title>
+    <link rel="stylesheet" href="customstyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <script src="customscripts.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bbg header navbar-light">
+      <div class="container-lg">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a
+              class="nav-link  undlink"
+              aria-current="page"
+              href="index.html"
+              >Home</a
+            >
+            <a class="nav-link undlink" href="about_me.html">About me</a>
+            <a class="nav-link undlink" href="my_work.html">My work</a>
+            <a class="nav-link undlink active" href="offer.html">Offer</a>
+            <a class="nav-link undlink" href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mdbg">
+      <div class="container-lg defp">
+        <div class="row">
+          <div class="col-12 justify-content-center d-flex">
+            <div class="calculator">
+              <div class="d-flex flex-column justify-content-center">
+                <p class="fs24 text-center">My rates/hr:</p>
+                <p class="text-center">Consulting - 5$</p>
+                <p class="text-center">Graphic Work - 15$</p>
+                <p class="text-center">Programming work - 20$</p>
+              </div>
+
+              <div class="calc">
+                <label for="service">Depending on the type of service the overall price of the project increases, as does the complexity of the final project</label>
+                <select id="service" >
+                  <option selected value="webpage">Webpage (1x) </option>
+                  <option value="ecommerce">Ecommerce Store(1.5x) </option>
+                  <option value="learning">Learning Platform(2x) </option>
+                </select>
+              </div>
+              <div class="calc">
+                <label for="consultationHours">Consultation Hours - Changing Your initial idea (or an early draft) into a solid and workable product, with all the necessary functionalities for success.</label>
+                <input type="number" id="consultationHours" />
+              </div>
+
+              <div class="calc">
+                <label for="graphicsHours">Graphic  Work Hours - Creating wireframes, stylesheets, color schema, branding and advertisements (if necessary)</label>
+                <input type="number" id="graphicsHours" />
+              </div>
+              <div class="calc">
+                <label for="programmingHours">Programming Work Hours - The most important and longest part of the project, includes frontend, backend as well as security work. </label>
+                <input type="number" id="programmingHours" />
+              </div>
+
+              <button class="btn-gradient grad-dark" id="calculateButton"><span>Calculate</span></button>
+              <div class="d-flex "><p class="fs24">Total cost: <span id="totalCost"></span>$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bbg">
+      <div class="container-lg">
+        <div
+          class="row d-flex justify-content-center p-t-120 p-b-120 position-relative"
+        >
+          <div class="cta">
+            <p class="col-12 col-md-8 fs24  m-b-0">
+              Is the rate too harsh ? Do you want to discuss the price in detail ? Don't be shy and reach out to me !
+            </p>
+            <div class="col-md-4 justify-content-center d-flex">
+              <a data-bs-toggle="modal" data-bs-target="#kontakt"
+                class="btn-gradient grad-dark w-fit"
+                href="#"
+                ><span>mateusz.borkowski22@gmail.com</span></a
+              >
+            </div>
+          </div>
+          <div class="col-10 col-md-6 d-flex flex-column align-items-center">
+            <img src="img/me.png" alt="" class="me m-b-40" />
+            <div>
+              <p class="text-center sectitle text-white">
+                Crafting visually stunning and user-centric websites on three
+                cups of sleep and 8 hours of caffeine.
+              </p>
+            </div>
+            <div class="d-flex"><div class="icoholder ftr m-l-20 m-r-20">
+              <a href="https://github.com/Materdeo"
+              ><i class="bi bi-github"></i
+              ></a>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+            class="modal fade mod_ktk"
+            id="kontakt"
+            tabindex="-1"
+            aria-labelledby="kontaktlabel"
+            aria-hidden="true"
+    >
+      <div class="modal-dialog ktk">
+        <div class="modal-content">
+          <div class="ktk_header">
+            <h5 class="ktk_title" id="kontaktlabel">Contact me</h5>
+            <a class="dismiss" data-bs-dismiss="modal" aria-label="Close">
+              <i class="bi bi-x"></i>
+            </a>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-md-4">
+                <input
+                        type="text"
+                        class="form-control"
+                        id="NameSurname"
+                        placeholder="Name and surname"
+                />
+              </div>
+              <div class="col-md-4">
+                <input
+                        type="tel"
+                        class="form-control"
+                        id="Phone"
+                        placeholder="Phone"
+                />
+              </div>
+              <div class="col-md-4">
+                <input
+                        type="email"
+                        class="form-control"
+                        id="inputEmail"
+                        placeholder="Your E-mail"
+                />
+              </div>
+              <div class="col-md-6">
+                <select id="Project" class="form-select">
+                  <option selected>Project type</option>
+                  <option>Webpage</option>
+                  <option>E-commerce store</option>
+                  <option>Page editing and technical support</option>
+                  <option>other projects</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <input
+                        type="text"
+                        class="form-control"
+                        id="budget"
+                        placeholder="budget"
+                />
+              </div>
+
+              <div class="col-12">
+                <textarea
+                        class="form-control message"
+                        id="Message"
+                        rows="4"
+                        placeholder="Project details"
+                ></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-gradient grad-dark">
+                  <span>Send</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
